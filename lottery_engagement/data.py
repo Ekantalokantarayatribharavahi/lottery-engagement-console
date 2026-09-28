@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from math import comb
 
 NATIONAL_LOTTERY = "https://www.nationallottery.co.za/"
+RULES_REFERENCE = "https://www.lottery.co.za/2026-south-africa-lottery-changes"
 
 @dataclass(frozen=True)
 class Game:
@@ -24,17 +25,12 @@ class Game:
         return self.main_combinations * (self.extra_pool or 1)
 
 GAMES = (
-    Game("LOTTO", 6, 52, "Bonus Ball", None, 5, "Wednesday and Saturday", NATIONAL_LOTTERY),
-    Game("POWERBALL", 5, 50, "PowerBall", 20, 5, "Tuesday and Friday", NATIONAL_LOTTERY),
-    Game("DAILY LOTTO", 5, 36, None, None, 3, "Every day except 25 December", NATIONAL_LOTTERY),
+    Game("LOTTO", 6, 52, "Bonus Ball", None, 5, "Wednesday and Saturday", RULES_REFERENCE),
+    Game("POWERBALL", 5, 50, "PowerBall", 16, 10, "Tuesday and Friday", RULES_REFERENCE),
+    Game("DAILY LOTTO", 5, 36, None, None, 3, "Every day except 25 December", RULES_REFERENCE),
 )
 
-DESIGN_DISCREPANCY = {
-    "claim": "The supplied design multiplied PowerBall combinations by 16.",
-    "current_rule": "The PowerBall is selected from 1–20.",
-    "correct_factor": 20,
-    "correct_jackpot_combinations": comb(50, 5) * 20,
-}
+DESIGN_DISCREPANCY = None
 
 MISCONCEPTION_CLAIMS = (
     "A number is overdue.",
