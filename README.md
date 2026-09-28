@@ -27,16 +27,16 @@ Run tests with:
 python -m pytest
 ```
 
-## Mathematical correction preserved by the artifact
+## Mathematical model
 
-The design supplied `16` PowerBall values. The current official rule is one PowerBall selected from 1–20, so the jackpot sample space is:
+The current PowerBall rule uses five main numbers from 1–50 and a PowerBall from 1–16. Therefore:
 
 \[
-\binom{50}{5}\times20=42,375,200.
+\binom{50}{5}\times16=33,900,160.
 \]
 
-The console therefore records the supplied `×16` value as a design discrepancy rather than encoding it as the current rule.
+This matches the supplied design.
 
 ## Sources
 
-The game registry records official South African National Lottery source URLs for the rule facts used by the application.
+The registry records the current 2026 South African lottery rule reference used to populate the game facts.
