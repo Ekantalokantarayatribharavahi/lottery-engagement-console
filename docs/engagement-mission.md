@@ -15,11 +15,11 @@ The artifact implements five required constructions:
 - C(52,6) = 20,358,520
 - C(50,5) = 2,118,760
 - C(36,5) = 376,992
-- PowerBall jackpot sample space under the current 1–20 PowerBall rule = 42,375,200
+- PowerBall jackpot sample space under the current 1–16 PowerBall rule = 33,900,160
 
-## Design discrepancy
+## Rule verification
 
-The original design supplied a PowerBall multiplier of 16. The registry uses the current rule of a PowerBall selected from 1–20, yielding 42,375,200 jackpot combinations. The discrepancy is deliberately visible in code and tests.
+The 2026 South African lottery rule reference records PowerBall as five main numbers from 1–50 plus a PowerBall from 1–16, with the main entry cost at R10. The supplied design therefore matches the current PowerBall multiplier.
 
 ## Non-goals
 
